@@ -1,3 +1,5 @@
+"use client";
+
 import prisma from "@/lib/prisma";
 import PackageCard from "@/components/guest/package-card";
 import Link from "next/link";

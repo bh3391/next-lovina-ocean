@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import { Car, MapPin, Clock, ShieldCheck, ChevronRight } from 'lucide-react';
 

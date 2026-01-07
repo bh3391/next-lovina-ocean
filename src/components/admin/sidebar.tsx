@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link";
 import { UserButton } from "@clerk/nextjs";
 import { LayoutDashboard, Package, Image as ImageIcon, FileText, LogOut, FileQuestion, TreePalm } from "lucide-react";
