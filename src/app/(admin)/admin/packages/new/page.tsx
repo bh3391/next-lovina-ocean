@@ -45,17 +45,31 @@ export default function NewPackagePage() {
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Price Input */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Sharing Price Input */}
               <div className="space-y-2">
-                <label className="text-xs font-bold uppercase tracking-widest text-slate-500 ml-1">Price (IDR)</label>
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500 ml-1">Sharing Price (IDR)</label>
                 <input 
-                  name="price"
+                  name="priceSharing"
                   type="number" 
                   required
                   placeholder="500000"
                   className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
                 />
+                <p className="text-[10px] text-slate-400 italic ml-1">Price per person for shared tour</p>
+              </div>
+
+              {/* Private Price Input */}
+              <div className="space-y-2">
+                <label className="text-xs font-bold uppercase tracking-widest text-slate-500 ml-1">Private Price (IDR)</label>
+                <input 
+                  name="pricePrivate"
+                  type="number" 
+                  required
+                  placeholder="2000000"
+                  className="w-full px-5 py-4 rounded-2xl bg-slate-50 border border-slate-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 outline-none transition-all"
+                />
+                <p className="text-[10px] text-slate-400 italic ml-1">Full boat price for private tour</p>
               </div>
 
               {/* Image URL Input */}
