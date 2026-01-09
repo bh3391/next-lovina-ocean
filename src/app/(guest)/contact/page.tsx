@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { MessageCircle, MapPin, Phone} from 'lucide-react';
+import Map from '@/components/section/map';
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -10,7 +11,7 @@ export default function ContactPage() {
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     const phoneNumber = "6283115300070"; // Ganti dengan nomor Anda
-    const text = `Hi Lovina Ocean! My name is ${name}. ${message}`;
+    const text = `Hi Lovina Ocean Dolphin Tour ! My name is ${name}. ${message}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
   };
 
@@ -94,20 +95,7 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="px-6 pb-24">
-        <div className="max-w-7xl mx-auto h-[450px] rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl relative">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.3842066914194!2d115.0213968!3d-8.163990499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd19bcb57c1c79b%3A0xa5da365f3a6ef33!2sLovina%20Ocean%20Dolphin%20Tour!5e0!3m2!1sid!2sid!4v1767772940834!5m2!1sid!2sid" 
-            width="100%" 
-            height="450" 
-            style={{ border: 0 }} 
-            allowFullScreen 
-            loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
-            className="w-full"
-          />
-        </div>
-      </section>
+      <Map />
     </main>
   );
 }

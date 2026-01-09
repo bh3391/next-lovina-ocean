@@ -152,7 +152,7 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
             </div>
 
             <a 
-              href={`https://wa.me/6283115300070?text=Hi, I want to book ${pkg.title}`}
+              href={`https://wa.me/6283115300070?text=Hi, Lovina Ocean Dolphin Tour I want to book ${pkg.title}`}
               className="flex items-center justify-center w-full py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold transition-all gap-2"
             >
               Book via WhatsApp

@@ -126,7 +126,7 @@ export default function FaqSection() {
               {"If you couldn't find what you're looking for, our local family team is ready to chat with you directly."}
             </p>
             <a 
-              href="https://wa.me/6283115300070?text=Hi Lovina Ocean, I have a question about..."
+              href="https://wa.me/6283115300070?text=Hi Lovina Ocean Dolphin Tour, I have a question about..."
               className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 px-10 py-5 rounded-2xl font-bold transition-all shadow-xl shadow-blue-600/30 hover:shadow-blue-600/50"
             >
               Message us on WhatsApp

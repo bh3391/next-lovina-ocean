@@ -1,8 +1,10 @@
+import PeacefulSection from "@/components/guest/peacefull";
 import AboutHome from "@/components/section/about-home";
 import Hero from "@/components/section/hero";
 import Package from "@/components/section/packages";
 import PickupSection from "@/components/section/pick-up";
 import TestimonialSlider from "@/components/section/testimonial-slider";
+import Map from "@/components/section/map";
 
 
 export default function Home() {
@@ -39,11 +41,15 @@ export default function Home() {
       />
       <main className="flex-grow">
       <Hero />
+      <PeacefulSection />
       <TestimonialSlider />
       
       <Package/>
+      
       <PickupSection />
+      <Map />
       <AboutHome />
+      
       
       
     </main>

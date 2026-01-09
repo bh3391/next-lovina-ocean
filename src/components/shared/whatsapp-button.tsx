@@ -5,7 +5,7 @@ import { MessageCircle } from 'lucide-react';
 
 export default function WhatsAppButton() {
   const phoneNumber = "6283115300070"; // Ganti dengan nomor WA Anda (awali dengan 62)
-  const message = "Hi Lovina Ocean! I'm interested in booking a Dolphin Tour. Can you help me?";
+  const message = "Hi Lovina Ocean Dolphin Tour! I'm interested in booking a Dolphin Tour. Can you help me?";
   
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

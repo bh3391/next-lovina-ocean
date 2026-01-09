@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">Lovina Ocean</h3>
+            <h3 className="text-2xl font-bold mb-4">Lovina Ocean Dolphin Tour</h3>
             <p className="text-gray-400">
               {"Experience the magic of dolphin tours in Bali's stunning Lovina Beach."}
             </p>
@@ -28,7 +28,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/package" className="hover:text-white transition">
+                <Link href="/packages" className="hover:text-white transition">
                   Packages
                 </Link>
               </li>
@@ -38,8 +38,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-white transition">
-                  Blog
+                <Link href="/policy" className="hover:text-white transition">
+                  Policies
                 </Link>
               </li>
             </ul>
@@ -51,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-2 text-gray-400">
               <li>Lovina Beach, Bali</li>
               <li>Phone: +6283115300070</li>
-              <li>Email: info@lovinaocean.com</li>
+              
             </ul>
           </div>
 
