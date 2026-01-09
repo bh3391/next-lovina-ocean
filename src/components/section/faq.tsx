@@ -122,7 +122,7 @@ export default function FaqSection() {
           
           <div className="relative z-10">
             <h4 className="text-2xl md:text-3xl font-bold mb-3 font-serif italic">Still have a question?</h4>
-            <p className="text-slate-400 mb-10 text-sm md:text-base max-w-md mx-auto">
+            <p className="text-slate-200 mb-10 text-sm md:text-base max-w-md mx-auto">
               {"If you couldn't find what you're looking for, our local family team is ready to chat with you directly."}
             </p>
             <a 
@@ -131,7 +131,7 @@ export default function FaqSection() {
             >
               Message us on WhatsApp
             </a>
-            <p className="mt-6 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+            <p className="mt-6 text-[10px] text-slate-200 uppercase tracking-widest font-bold">
               Typically replies within 15 minutes
             </p>
           </div>

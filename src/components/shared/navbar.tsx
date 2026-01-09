@@ -106,6 +106,7 @@ export default function Navbar() {
         {/* Mobile Toggle */}
         <button
           className="md:hidden outline-none"
+          aria-label="Open Navigation Menu"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (

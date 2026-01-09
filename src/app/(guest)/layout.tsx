@@ -17,12 +17,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Lovina Ocean Dolphin Tour | Authentic Sunrise Experience in Bali",
-  description: "Experience the magic of Lovina with our ethical dolphin watching tours. Sunrise trips, swimming with dolphins, and snorkeling in Bali's calm northern sea.",
-  keywords: ["Lovina Dolphin Tour", "Bali Dolphin Watching", "Ethical Dolphin Tour Bali", "Lovina Sunrise Tour"],
+  title: "Lovina Ocean Dolphin Tour | Best Sunrise Dolphin Watching & Snorkeling Experience Bali",
+  description: "Experience the magic of Lovina with our professional dolphin watching tours. Enjoy sunrise cruises, snorkeling at coral reefs, and traditional fishing. Book your Bali adventure today!",
+  keywords: ["Lovina Dolphin Tour", "Bali Dolphin Watching", "Ethical Dolphin Tour Bali", "Lovina Sunrise Tour", "Bali Snorkeling Trip", "Lovina Beach Activities", "Family-Friendly Tours Bali", "Sustainable Tourism Bali"],
   openGraph: {
-    title: "Lovina Ocean Dolphin Tour",
-    description: "Ethical and Authentic Dolphin Experience in Lovina, Bali.",
+    title: "Lovina Ocean Dolphin Tour | Best Sunrise & Dolphin Watching Experience Bali",
+    description: "Book your private sunrise dolphin tour in Lovina, Bali. Best prices, professional guides, and unforgettable snorkeling experiences.",
     url: "https://lovinaoceandolphintour.com", // Ganti dengan domain Vercel Anda
     siteName: "Lovina Ocean Dolphin Tour",
     images: [
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
         url: "/og-image.jpg", // Pastikan file ini ada di folder /public
         width: 1200,
         height: 630,
+        alt: "Lovina Ocean Dolphin Tour Experience",
       },
     ],
     locale: "en_US",

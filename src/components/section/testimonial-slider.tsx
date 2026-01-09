@@ -45,19 +45,19 @@ export default function TestimonialSliderMinimal() {
                 <Star key={i} className="w-4 h-4 fill-blue-600 text-blue-600" />
               ))}
             </div>
-            <h3 className="text-2xl font-serif font-bold text-slate-900 tracking-tight">
+            <h2 className="text-2xl font-serif font-bold text-slate-900 tracking-tight">
               Guest Stories
-            </h3>
+            </h2>
             <p className="text-sm text-slate-500 font-medium uppercase tracking-widest">
               {reviews.length} Happy Travelers
             </p>
             
             {/* Minimal Navigation */}
             <div className="flex justify-center md:justify-start gap-4 pt-6">
-              <button onClick={slidePrev} className="p-2 hover:text-blue-600 transition-colors">
+              <button onClick={slidePrev} className="p-2 hover:text-blue-600 transition-colors" aria-label="Previous">
                 <ChevronLeft className="w-5 h-5" />
               </button>
-              <button onClick={slideNext} className="p-2 hover:text-blue-600 transition-colors">
+              <button onClick={slideNext} className="p-2 hover:text-blue-600 transition-colors" aria-label="Next">
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
@@ -83,7 +83,7 @@ export default function TestimonialSliderMinimal() {
       <div className="flex items-center gap-4">
         {/* Avatar Inisial */}
         <div className="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center border border-slate-200">
-          <span className="text-xs font-bold text-slate-500 uppercase">
+          <span className="text-xs font-bold text-slate-700 uppercase">
             {reviews[currentIndex].name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
           </span>
         </div>
@@ -92,7 +92,7 @@ export default function TestimonialSliderMinimal() {
           <p className="font-bold text-slate-900 text-sm leading-none mb-1">
             {reviews[currentIndex].name}
           </p>
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-600">
             {reviews[currentIndex].country}
           </p>
         </div>

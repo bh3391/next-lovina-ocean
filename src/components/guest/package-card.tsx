@@ -35,7 +35,7 @@ export default function PackageCard({ pkg }: { pkg: any }) {
             {pkg.title}
           </h3>
           <div className="text-right">
-            <p className="text-[10px] text-slate-400 uppercase font-bold tracking-tighter">Starts from</p>
+            <p className="text-[10px] text-slate-600 uppercase font-bold tracking-tighter">Starts from</p>
             <p className="text-lg font-black text-blue-600">IDR {pkg.price.toLocaleString()}</p>
           </div>
         </div>
