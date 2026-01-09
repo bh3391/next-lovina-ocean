@@ -17,6 +17,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NODE_ENV === 'production' 
+      ? 'https://lovinaoceandolphintour.com' // Alamat domain asli Anda
+      : 'http://localhost:3000'
+  ),
   title: "Lovina Ocean Dolphin Tour | Best Sunrise Dolphin Watching & Snorkeling Experience Bali",
   description: "Experience the magic of Lovina with our professional dolphin watching tours. Enjoy sunrise cruises, snorkeling at coral reefs, and traditional fishing. Book your Bali adventure today!",
   keywords: ["Lovina Dolphin Tour", "Bali Dolphin Watching", "Ethical Dolphin Tour Bali", "Lovina Sunrise Tour", "Bali Snorkeling Trip", "Lovina Beach Activities", "Family-Friendly Tours Bali", "Sustainable Tourism Bali"],
