@@ -10,9 +10,9 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "name": "Lovina Ocean Dolphin Tour",
-    "image": "https://lovinaocean.com/logo.png",
-    "@id": "https://lovinaocean.com",
-    "url": "https://lovinaocean.com",
+    "image": "https://lovinaoceandolphintour.com/logo.png",
+    "@id": "https://lovinaoceandolphintour.com",
+    "url": "https://lovinaoceandolphintour.com",
     "telephone": "+6283115300070",
     "priceRange": "$$",
     "address": {
@@ -25,8 +25,9 @@ export default function Home() {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": -8.162,
-      "longitude": 115.025
+      "latitude": -8.16385774864859,
+      "longitude": 115.02136461349536,
+       
     }
   };
 

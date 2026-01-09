@@ -24,7 +24,8 @@ export async function createPackage(formData: FormData) {
         title,
         slug: slugify(title, { lower: true, strict: true }),
         description: formData.get("description") as string,
-        price: parseFloat(formData.get("price") as string),
+        priceSharing: parseInt(formData.get("priceSharing") as string) || 0,
+        pricePrivate: parseInt(formData.get("pricePrivate") as string) || 0,
         image: formData.get("image") as string,
         features: (formData.get("features") as string).split(",").map(f => f.trim()),
         // SIMPAN SEBAGAI JSON

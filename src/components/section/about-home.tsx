@@ -54,7 +54,7 @@ For decades, our family relied on the ocean’s bounty. We didn’t just learn t
                   <Anchor className="w-5 h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-1">Local Wisdom</h4>
+                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-1">Local Wisdom</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">Guided by generations of local knowledge.</p>
                 </div>
               </div>
@@ -64,7 +64,7 @@ For decades, our family relied on the ocean’s bounty. We didn’t just learn t
                   <ShieldCheck className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-1">Eco-Friendly</h4>
+                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-1">Eco-Friendly</h3>
                   <p className="text-xs text-slate-500 leading-relaxed">Respectful distances & sustainable boats.</p>
                 </div>
               </div>

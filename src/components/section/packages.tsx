@@ -9,9 +9,15 @@ export default async function PackagesSection() {
   });
 
   const packages = rawPackages.map(pkg => ({
-    ...pkg,
-    createdAt: pkg.createdAt.toISOString(), // Ubah Date ke String
-    price: Number(pkg.price), // Pastikan Float/Decimal jadi Number
+    id: pkg.id,
+    title: pkg.title,
+    slug: pkg.slug,
+    description: pkg.description,
+    image: pkg.image || "/placeholder-dolphin.jpg",
+    priceSharing: Number(pkg.priceSharing || 0),
+    pricePrivate: Number(pkg.pricePrivate || 0),
+    features: pkg.features || [],
+    itinerary: Array.isArray(pkg.itinerary) ? pkg.itinerary : [],
   }));
 
   if (packages.length === 0) return null;

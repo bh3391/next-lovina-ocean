@@ -128,9 +128,16 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
         {/* Right Column: Sticky Booking Card */}
         <div className="lg:col-span-1">
           <div className="sticky top-24 p-8 rounded-[2.5rem] bg-slate-900 text-white shadow-2xl">
-            <p className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-2">Price Per Person</p>
-            <div className="flex items-baseline gap-2 mb-6">
-              <span className="text-4xl font-black">IDR {pkg.price.toLocaleString()}</span>
+            <p className="text-slate-400 text-sm font-bold uppercase tracking-widest mb-4">Price Per Person</p>
+            <div className="space-y-3 mb-8">
+              <div className="flex items-baseline justify-between">
+                <span className="text-slate-300 text-sm">Sharing Tour</span>
+                <span className="text-2xl font-black text-emerald-400">IDR {pkg.priceSharing.toLocaleString()}</span>
+              </div>
+              <div className="flex items-baseline justify-between">
+                <span className="text-slate-300 text-sm">Private Tour</span>
+                <span className="text-2xl font-black text-blue-400">IDR {pkg.pricePrivate.toLocaleString()}</span>
+              </div>
             </div>
 
             <div className="space-y-4 mb-8">
@@ -156,6 +163,7 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
             </p>
           </div>
         </div>
+
       </section>
     </main>
   );

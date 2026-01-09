@@ -54,8 +54,9 @@ export default async function PackagesPage() {
                 ) : (
                   <div className="flex items-center justify-center h-full text-slate-400 italic text-xs">No Image</div>
                 )}
-                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full shadow-sm">
-                  <span className="text-xs font-bold text-blue-600">IDR {pkg.price.toLocaleString()}</span>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-2 rounded-full shadow-sm space-y-0.5">
+                  <div className="text-[10px] font-bold text-slate-500">Sharing: IDR {pkg.priceSharing.toLocaleString()}</div>
+                  <div className="text-[10px] font-bold text-blue-600">Private: IDR {pkg.pricePrivate.toLocaleString()}</div>
                 </div>
               </div>
 
