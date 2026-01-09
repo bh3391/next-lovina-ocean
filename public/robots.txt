@@ -1,0 +1,33 @@
+# ==========================================
+# Lovina Ocean Dolphin Tour - Robots.txt
+# ==========================================
+
+# 1. Aturan untuk semua mesin pencari (Google, Bing, Yahoo)
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /sign-in
+Disallow: /sign-up
+Disallow: /api
+Disallow: /_next/
+Disallow: /static/
+
+# 2. Aturan khusus untuk Bot AI (ChatGPT/Perplexity/Google Gemini)
+# Memberikan izin penuh agar tour Anda muncul saat orang tanya di AI
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+
+User-agent: PerplexityBot
+Allow: /
+
+# 3. Mencegah bot pencuri konten/scraping harga yang agresif
+User-agent: CCBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+
+# 4. Lokasi Peta Situs (Sitemap)
+Sitemap: https://lovinaoceandolphintour.com/sitemap.xml
