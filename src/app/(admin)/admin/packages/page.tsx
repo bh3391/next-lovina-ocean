@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import prisma from "@/lib/prisma";
-import { Plus, Edit, Trash2, MapPin, Tag } from 'lucide-react';
+import { getSmartImage } from "@/lib/image-loader";
+import { Plus, Edit, Trash2,} from 'lucide-react';
 
 // Memastikan data selalu terbaru (tidak di-cache)
 export const dynamic = 'force-dynamic';
@@ -45,7 +46,7 @@ export default async function PackagesPage() {
               <div className="relative h-48 w-full bg-slate-100">
                 {pkg.image ? (
                   <Image 
-                    src={pkg.image} 
+                    src={getSmartImage(pkg.image, 400)} 
                     alt={pkg.title} 
                     fill 
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

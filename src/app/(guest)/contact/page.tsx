@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { MessageCircle, MapPin, Phone, Mail, Clock, Send, Star } from 'lucide-react';
+import { MessageCircle, MapPin, Phone} from 'lucide-react';
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -9,7 +9,7 @@ export default function ContactPage() {
 
   const handleWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
-    const phoneNumber = "628123456789"; // Ganti dengan nomor Anda
+    const phoneNumber = "6283115300070"; // Ganti dengan nomor Anda
     const text = `Hi Lovina Ocean! My name is ${name}. ${message}`;
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`, '_blank');
   };
@@ -19,7 +19,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="bg-slate-900 py-24 text-center text-white px-6">
         <h1 className="text-5xl md:text-6xl font-bold font-serif italic mb-4">Get in Touch</h1>
-        <p className="text-slate-400 max-w-xl mx-auto">Have questions about the dolphins or need a custom tour? We're just a message away.</p>
+        <p className="text-slate-400 max-w-xl mx-auto">{ "Have questions about the dolphins or need a custom tour? We're just a message away." }</p>
       </section>
 
       <section className="max-w-7xl mx-auto px-6 -mt-16 pb-24">
@@ -42,7 +42,7 @@ export default function ContactPage() {
                 <Phone className="w-6 h-6" />
               </div>
               <h3 className="font-bold text-slate-900 mb-2">WhatsApp</h3>
-              <p className="text-slate-500 text-sm">+62831-1530-0070</p>
+              <p className="text-slate-500 text-sm">+6283115300070</p>
             </div>
           </div>
 

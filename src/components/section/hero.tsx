@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { getSmartImage } from "@/lib/image-loader";
 import Link from 'next/link';
 import { ArrowRight, MessageCircle } from 'lucide-react';
 
@@ -16,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-950 z-10" />
         <Image
-          src="https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1200" // Ukuran lebih kecil untuk mobile
+          src={getSmartImage("https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1200", 1200)}
           alt="Dolphin watching in Lovina Bali"
           fill
           priority
@@ -34,7 +35,7 @@ export default function Hero() {
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
           </span>
           <span className="text-[9px] md:text-[10px] text-blue-200 uppercase tracking-[0.3em] font-medium">
-            Bali's Best Kept Secret
+            {"Bali's Best Kept Secret"}
           </span>
         </div>
 

@@ -1,0 +1,20 @@
+import { MetadataRoute } from 'next';
+
+export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://lovinaoceandolphintour.com'; 
+  return {
+    rules: [
+      {
+        userAgent: '*',
+        allow: '/',
+        disallow: [
+          '/admin',      // Melarang bot masuk ke dashboard admin
+          '/sign-in',    // Melarang bot mengindeks halaman login
+          '/sign-up',    // Melarang bot mengindeks halaman daftar
+          '/api/',       // Melarang bot mengakses endpoint API secara langsung
+        ],
+      },
+    ],
+    sitemap: `${baseUrl}/sitemap.xml`,
+  };
+}

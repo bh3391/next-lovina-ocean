@@ -14,7 +14,7 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">Lovina Ocean</h3>
             <p className="text-gray-400">
-              Experience the magic of dolphin tours in Bali's stunning Lovina Beach.
+              {"Experience the magic of dolphin tours in Bali's stunning Lovina Beach."}
             </p>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li>Lovina Beach, Bali</li>
-              <li>Phone: +62-XXXX-XXXX</li>
+              <li>Phone: +6283115300070</li>
               <li>Email: info@lovinaocean.com</li>
             </ul>
           </div>

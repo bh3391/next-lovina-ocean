@@ -1,5 +1,6 @@
-import AboutHome from "@/components/section/about-home";
-import Image from "next/image"; 
+
+import Image from "next/image";
+import { getSmartImage } from "@/lib/image-loader";
 import { ShieldCheck, Globe, Anchor, Users, Heart } from "lucide-react";
 
 
@@ -11,7 +12,7 @@ export default function AboutUs() {
       
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <Image 
-          src="https://res.cloudinary.com/doiaj5zz1/image/upload/v1767765948/Snorkeling_y2gmy9.png" 
+          src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1767765948/Snorkeling_y2gmy9.png", 1200)}
           alt="Lovina Sunrise" 
           fill 
           className="object-cover"
@@ -51,7 +52,7 @@ export default function AboutUs() {
           </div>
           <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-2xl">
             <Image 
-              src="https://res.cloudinary.com/doiaj5zz1/image/upload/v1767764347/photo_6078126705735743735_y-768x1024_l8nity.jpg" 
+              src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1767764347/photo_6078126705735743735_y-768x1024_l8nity.jpg", 800)}
               alt="Traditional Balinese Boat" 
               fill 
               className="object-cover"
@@ -108,7 +109,7 @@ export default function AboutUs() {
         <div className="max-w-3xl mx-auto">
           <Heart className="w-10 h-10 mx-auto mb-8 opacity-50" />
           <blockquote className="text-3xl md:text-4xl font-serif italic leading-snug mb-8">
-            "Our father taught us that the ocean gives what you give to it. Today, we give it our protection, and it gives our guests the memory of a lifetime."
+            {" Our father taught us that the ocean gives what you give to it. Today, we give it our protection, and it gives our guests the memory of a lifetime."}
           </blockquote>
           <p className="uppercase tracking-[0.2em] font-bold text-blue-200">— The Lovina Ocean Team</p>
         </div>

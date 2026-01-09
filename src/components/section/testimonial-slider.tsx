@@ -100,8 +100,8 @@ export default function TestimonialSliderMinimal() {
 
       {/* Review Text */}
       <p className="text-lg md:text-xl text-slate-700 leading-relaxed italic mb-8">
-        "{reviews[currentIndex].text}"
-      </p>
+  {`"${reviews[currentIndex].text}"`}
+</p>
 
       {/* Profile Section */}
       

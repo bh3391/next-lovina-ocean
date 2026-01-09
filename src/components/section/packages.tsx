@@ -30,7 +30,7 @@ export default async function PackagesSection() {
             Most Popular Tour Packages
           </h3>
           <p className="text-slate-500 leading-relaxed">
-            Choose from our curated selection of Lovina's best adventures. From sunrise dolphin watching to hidden waterfall expeditions.
+            {"Choose from our curated selection of Lovina's best adventures. From sunrise dolphin watching to hidden waterfall expeditions."}
           </p>
         </div>
 

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { getSmartImage } from "@/lib/image-loader";
 import { Clock, CheckCircle2, ArrowRight } from "lucide-react";
 
 export default function PackageCard({ pkg }: { pkg: any }) {
@@ -13,7 +14,7 @@ export default function PackageCard({ pkg }: { pkg: any }) {
       {/* Image Header */}
       <div className="relative h-64 w-full overflow-hidden">
         <Image
-          src={pkg.image || "/placeholder-dolphin.jpg"}
+          src={getSmartImage(pkg.image || "/placeholder-dolphin.jpg", 600)}
           alt={pkg.title}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

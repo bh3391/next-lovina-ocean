@@ -1,7 +1,8 @@
 import prisma from "@/lib/prisma";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Clock, Users, MapPin, Check, ChevronRight, Calendar } from "lucide-react";
+import { getSmartImage } from "@/lib/image-loader";
+import { Clock,  MapPin, Check, ChevronRight,  } from "lucide-react";
 
 export default async function PackageDetailPage({ params }: { params: { slug: string } }) {
   const pkg = await prisma.package.findUnique({
@@ -18,7 +19,7 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
       {/* Hero Section */}
       <section className="relative h-[60vh] md:h-[70vh] w-full">
         <Image
-          src={pkg.image || "/placeholder.jpg"}
+          src={getSmartImage(pkg.image || "/placeholder.jpg", 1200)}
           alt={pkg.title}
           fill
           priority
@@ -56,7 +57,7 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
           {/* Features / Inclusions */}
           <div className="bg-slate-50 p-8 rounded-3xl">
             <h2 className="text-xl font-bold text-slate-900 mb-6 flex items-center gap-2">
-              <Check className="w-5 h-5 text-blue-600" /> What's Included
+              <Check className="w-5 h-5 text-blue-600" /> {"What's Included"}
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {pkg.features.map((feature, index) => (
@@ -144,7 +145,7 @@ export default async function PackageDetailPage({ params }: { params: { slug: st
             </div>
 
             <a 
-              href={`https://wa.me/628123456789?text=Hi, I want to book ${pkg.title}`}
+              href={`https://wa.me/6283115300070?text=Hi, I want to book ${pkg.title}`}
               className="flex items-center justify-center w-full py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-bold transition-all gap-2"
             >
               Book via WhatsApp

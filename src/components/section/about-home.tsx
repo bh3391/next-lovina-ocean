@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import { getSmartImage } from "@/lib/image-loader";
 import { Anchor, ShieldCheck, Heart } from 'lucide-react';
 import Link from 'next/link';
 
@@ -15,7 +16,7 @@ export default function AboutHome() {
           <div className="relative w-full lg:w-1/2">
             <div className="relative aspect-[4/5] md:aspect-square overflow-hidden rounded-2xl shadow-2xl">
               <Image 
-                src="https://res.cloudinary.com/doiaj5zz1/image/upload/v1767764347/photo_6078126705735743735_y-768x1024_l8nity.jpg" // Gambar nelayan/perahu lokal
+                src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1767764347/photo_6078126705735743735_y-768x1024_l8nity.jpg", 800)}
                 alt="Local Lovina Fisherman"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-700"
@@ -35,7 +36,7 @@ export default function AboutHome() {
               <span className="text-blue-600 text-xs font-bold uppercase tracking-[0.3em]">Our Heritage</span>
               <h2 className="text-4xl md:text-5xl font-serif italic leading-tight text-slate-900">
                 Preserving the Magic of <br />
-                <span className="not-italic font-sans font-bold text-blue-600">Lovina's Waters</span>
+                <span className="not-italic font-sans font-bold text-blue-600">{"Lovina's Waters"}</span>
               </h2>
             </div>
 

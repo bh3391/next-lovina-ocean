@@ -26,7 +26,7 @@ export default function PickupSection() {
             </div>
             
             <p className="text-slate-600 leading-relaxed text-lg">
-              Don't worry about the long drive to the north. Our professional drivers will pick you up directly from your hotel lobby in a clean, air-conditioned private car, ensuring you arrive at Lovina refreshed and ready for the dolphins.
+              {"Don't worry about the long drive to the north. Our professional drivers will pick you up directly from your hotel lobby in a clean, air-conditioned private car, ensuring you arrive at Lovina refreshed and ready for the dolphins."}
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -52,7 +52,7 @@ export default function PickupSection() {
 
             <div className="pt-4">
                <a 
-                href="https://wa.me/628123456789?text=I'd like to book a private pickup to Lovina"
+                href="https://wa.me/6283115300070?text=I'd like to book a private pickup to Lovina"
                 className="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-600 transition-all group"
               >
                 Book a Transfer

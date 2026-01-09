@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Save, Plus, Trash2, FileJson, LayoutList } from "lucide-react";
+import { Plus, Trash2, FileJson, LayoutList } from "lucide-react";
 
 export default function AdminFAQ() {
   const [faqs, setFaqs] = useState<{ q: string; a: string }[]>([]);

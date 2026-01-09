@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Save, Plus, Trash2, Star, Quote, FileJson, LayoutGrid } from "lucide-react";
+import { Save, Plus, Trash2, Star, FileJson, LayoutGrid } from "lucide-react";
 
 export default function AdminTestimonials() {
   const [reviews, setReviews] = useState<{ name: string; country: string; text: string; stars: number }[]>([]);

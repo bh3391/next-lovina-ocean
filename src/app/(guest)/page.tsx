@@ -3,12 +3,40 @@ import Hero from "@/components/section/hero";
 import Package from "@/components/section/packages";
 import PickupSection from "@/components/section/pick-up";
 import TestimonialSlider from "@/components/section/testimonial-slider";
-import Image from "next/image"; 
+
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Lovina Ocean Dolphin Tour",
+    "image": "https://lovinaocean.com/logo.png",
+    "@id": "https://lovinaocean.com",
+    "url": "https://lovinaocean.com",
+    "telephone": "+6283115300070",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Lovina Beach",
+      "addressLocality": "Buleleng",
+      "addressRegion": "Bali",
+      "postalCode": "81151",
+      "addressCountry": "ID"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -8.162,
+      "longitude": 115.025
+    }
+  };
+
   return (
-    
-    <main className="flex-grow">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="flex-grow">
       <Hero />
       <TestimonialSlider />
       
@@ -18,5 +46,9 @@ export default function Home() {
       
       
     </main>
+    </>
   );
 }
+
+
+
