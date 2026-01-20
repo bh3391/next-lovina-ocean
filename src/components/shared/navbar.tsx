@@ -12,7 +12,7 @@ const navLinks = [
   { name: "About", href: "/about-us" },
   { name: "Contact", href: "/contact" },
   // { name: "Gallery", href: "/gallery" },
-  // { name: "Blog", href: "/blog" },
+  { name: "Blog", href: "/blog" },
   
 ];
 
@@ -120,7 +120,7 @@ export default function Navbar() {
       {/* Mobile Menu Overlay */}
       {/* Mobile Menu Overlay */}
 <div
-  className={`fixed inset-0 bg-white/95 backdrop-blur-xl z-[90] flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
+  className={`fixed inset-0 h-[100dvh] bg-white/95 backdrop-blur-xl z-[999] top-0 left-0 right-0 -translate-y-full overflow-y-auto flex flex-col items-center justify-center transition-all duration-500 md:hidden ${
     isOpen 
       ? "opacity-100 pointer-events-auto translate-y-0" 
       : "opacity-0 pointer-events-none -translate-y-10"

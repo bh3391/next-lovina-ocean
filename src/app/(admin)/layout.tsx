@@ -1,7 +1,18 @@
+import "@/app/globals.css";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
 import Sidebar from "@/components/admin/sidebar";
+import {
+  ClerkProvider,
+  
+} from '@clerk/nextjs';
+import NextTopLoader from 'nextjs-toploader';
+import { Inter } from 'next/font/google';
 
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap', // Ini sangat penting untuk LCP!
+})
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth();
@@ -22,11 +33,18 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <div className="flex h-screen bg-slate-50 overflow-hidden">
-      <Sidebar />
-      <main className="flex-1 overflow-y-auto p-4 md:p-10">
-        {children}
-      </main>
-    </div>
+    <html lang="en" className={inter.className}>
+      <body>
+        <NextTopLoader />
+        <ClerkProvider>
+          <div className="flex h-screen bg-slate-50 overflow-hidden">
+            <Sidebar />
+            <main className="flex-1 overflow-y-auto p-4 md:p-10">
+              {children}
+            </main>
+          </div>
+        </ClerkProvider>
+      </body>
+    </html>
   );
 }

@@ -20,6 +20,19 @@ export default function FaqSection() {
   // Logika menampilkan data: tampilkan semua jika showAll true, jika tidak hanya 5
   const displayedFaqs = showAll ? faqs : faqs.slice(0, 5);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a
+      }
+    }))
+  };
+
   return (
     <section className="py-24 bg-slate-50/50">
       <div className="max-w-4xl mx-auto px-6">

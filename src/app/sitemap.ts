@@ -10,10 +10,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       slug: true,
     },
   });
+  const allBlogs = await prisma.blog.findMany({
+    select: {
+      slug: true,
+    },
+  });
 
   // MAPPING DATA KE FORMAT SITEMAP
   const packageEntries: MetadataRoute.Sitemap = allPackages.map((pkg) => ({
     url: `${baseUrl}/packages/${pkg.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+  const blogEntries: MetadataRoute.Sitemap = allBlogs.map((blg) => ({
+    url: `${baseUrl}/blog/${blg.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -41,7 +52,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         priority: 0.5,
     },
     {
-        url: `${baseUrl}/about`,
+        url: `${baseUrl}/about-us`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.5,
+    },
+    {
+        url: `${baseUrl}/blog`,
         lastModified: new Date(),
         changeFrequency: 'monthly',
         priority: 0.5,
@@ -54,5 +71,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  return [...staticEntries, ...packageEntries];
+  return [...staticEntries, ...packageEntries, ...blogEntries];
 }
