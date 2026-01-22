@@ -8,6 +8,7 @@ import {
 } from '@clerk/nextjs';
 import NextTopLoader from 'nextjs-toploader';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
             </main>
           </div>
         </ClerkProvider>
+        <Analytics />
       </body>
     </html>
   );

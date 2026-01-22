@@ -10,6 +10,7 @@ import {
 } from '@clerk/nextjs'
 import NextTopLoader from 'nextjs-toploader';
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -89,6 +90,7 @@ export default function RootLayout({
           <FaqSection />
           <Footer />
           <WhatsAppButton />
+          <Analytics />
         </body>
       </html>
     </ClerkProvider>
