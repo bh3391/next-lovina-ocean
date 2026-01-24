@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function TestimonialSliderMinimal() {
@@ -49,65 +50,79 @@ export default function TestimonialSliderMinimal() {
               Guest Stories
             </h2>
             <p className="text-sm text-slate-500 font-medium uppercase tracking-widest">
-              {reviews.length} Happy Travelers
+              {reviews.length} / 725 Happy Travelers
             </p>
             
-            {/* Minimal Navigation */}
-            <div className="flex justify-center md:justify-start gap-4 pt-6">
-              <button onClick={slidePrev} className="p-2 hover:text-blue-600 transition-colors" aria-label="Previous">
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button onClick={slideNext} className="p-2 hover:text-blue-600 transition-colors" aria-label="Next">
-                <ChevronRight className="w-5 h-5" />
-              </button>
+            {/* Navigation & See All Link */}
+            <div className="pt-6 space-y-4">
+               <div className="flex justify-center md:justify-start gap-4">
+                <button onClick={slidePrev} className="p-2 border border-slate-100 rounded-full hover:bg-slate-50 hover:text-blue-600 transition-all" aria-label="Previous">
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button onClick={slideNext} className="p-2 border border-slate-100 rounded-full hover:bg-slate-50 hover:text-blue-600 transition-all" aria-label="Next">
+                  <ChevronRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Tautan See All */}
+              <div className="flex justify-center md:justify-start pt-2">
+                <a 
+                  href="https://search.google.com/local/reviews?placeid=ChIJm8fBV8ub0S0RM--m82WjXQo&q=Lovina+Ocean+Dolphin+Tour&hl=id&gl=ID" 
+                  className="group inline-flex items-center gap-2 text-xs font-bold text-slate-400 hover:text-blue-600 uppercase tracking-tighter transition-colors"
+                >
+                  See all our guest reviews
+                  <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
+                </a>
+              </div>
             </div>
           </div>
 
           {/* Right Side: Animated Content */}
-          <div className="w-full md:w-2/3 relative h-[220px] md:h-[180px]">
-  <AnimatePresence mode="wait">
-    <motion.div
-      key={currentIndex}
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -10 }}
-      transition={{ duration: 0.3 }}
-      className="absolute inset-0"
-    >
-      {/* Stars & Rating */}
-      <div className="flex gap-0.5 mb-4">
-        {[...Array(reviews[currentIndex].stars || 5)].map((_, i) => (
-          <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
-        ))}
-      </div>
-      <div className="flex items-center gap-4">
-        {/* Avatar Inisial */}
-        <div className="flex-shrink-0 w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center border border-slate-200">
-          <span className="text-xs font-bold text-slate-700 uppercase">
-            {reviews[currentIndex].name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
-          </span>
-        </div>
+          <div className="w-full md:w-2/3 relative min-h-[250px] md:min-h-[200px]">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="absolute inset-0"
+              >
+                {/* Review Card */}
+                <div className="space-y-6">
+                  {/* Stars */}
+                  <div className="flex gap-0.5">
+                    {[...Array(reviews[currentIndex].stars || 5)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
 
-        <div>
-          <p className="font-bold text-slate-900 text-sm leading-none mb-1">
-            {reviews[currentIndex].name}
-          </p>
-          <p className="text-xs text-slate-600">
-            {reviews[currentIndex].country}
-          </p>
-        </div>
-      </div>
+                  {/* Review Text */}
+                  <p className="text-lg md:text-xl text-slate-700 leading-relaxed italic">
+                    {`"${reviews[currentIndex].text}"`}
+                  </p>
 
-      {/* Review Text */}
-      <p className="text-lg md:text-xl text-slate-700 leading-relaxed italic mb-8">
-  {`"${reviews[currentIndex].text}"`}
-</p>
+                  {/* Profile Section */}
+                  <div className="flex items-center gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center border border-blue-100">
+                      <span className="text-xs font-bold text-blue-700 uppercase">
+                        {reviews[currentIndex].name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+                      </span>
+                    </div>
 
-      {/* Profile Section */}
-      
-    </motion.div>
-  </AnimatePresence>
-</div>
+                    <div>
+                      <p className="font-bold text-slate-900 text-sm leading-none mb-1">
+                        {reviews[currentIndex].name}
+                      </p>
+                      <p className="text-xs text-slate-500 font-medium">
+                        {reviews[currentIndex].country}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </section>

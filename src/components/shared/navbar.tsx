@@ -84,7 +84,7 @@ export default function Navbar() {
   </div>
   
   {/* Teks Nama Brand (Opsional) */}
-  <span className={`font-serif italic text-lg transition-colors duration-300 ${
+  <span className={`font-serif italic text-md transition-colors duration-300 ${
     scrolled ? "text-slate-800" : "text-white"
   }`}>
     Lovina Ocean Dolphin Tour
@@ -170,9 +170,9 @@ export default function Navbar() {
     }`}>
        <p className="text-gray-400 text-[10px] uppercase tracking-[0.5em] mb-6">Connect With Us</p>
        <div className="flex space-x-8 justify-center text-slate-900">
-          <span className="text-xs font-bold tracking-widest border-b border-slate-900">IG</span>
-          <span className="text-xs font-bold tracking-widest border-b border-slate-900">FB</span>
-          <span className="text-xs font-bold tracking-widest border-b border-slate-900">WA</span>
+          <span className="text-xs font-bold tracking-widest border-b border-slate-900"><a href="https://www.instagram.com/lovina_paket_dolphin_tour?igsh=MTAwNjAwOGx3c2FpMg==&utm_source=ig_contact_invite">IG</a></span>
+          <span className="text-xs font-bold tracking-widest border-b border-slate-900"><a href="https://wa.me/6283115300070">WA</a></span>
+          
        </div>
     </div>
   </div>
