@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X, Anchor } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
@@ -11,7 +12,7 @@ const navLinks = [
   { name: "Packages", href: "/packages" },
   { name: "About", href: "/about-us" },
   { name: "Contact", href: "/contact" },
-  // { name: "Gallery", href: "/gallery" },
+  { name: "Gallery", href: "/gallery" },
   { name: "Blog", href: "/blog" },
   
 ];
@@ -58,14 +59,37 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <Anchor className={`w-8 h-8 ${scrolled ? "text-blue-600" : "text-white"}`} />
-          <span className={`text-xl font-serif italic tracking-tighter ${
-            scrolled ? "text-slate-900" : "text-white"
-          }`}>
-            Lovina Ocean
-          </span>
-        </Link>
+        <Link href="/" className="flex items-center gap-2 group">
+  <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
+    {/* Logo Putih - Muncul saat di atas (scrolled = false) */}
+    <Image
+      src="/logo-putih.png"
+      alt="Lovina Ocean Logo"
+      fill
+      className={`object-contain transition-opacity duration-500 ${
+        scrolled ? "opacity-0" : "opacity-100"
+      }`}
+      priority
+    />
+
+    {/* Logo Biru - Muncul saat di-scroll (scrolled = true) */}
+    <Image
+      src="/logo-biru-crop.png"
+      alt="Lovina Ocean Logo"
+      fill
+      className={`object-contain transition-opacity duration-500 absolute top-0 left-0 ${
+        scrolled ? "opacity-100" : "opacity-0"
+      }`}
+    />
+  </div>
+  
+  {/* Teks Nama Brand (Opsional) */}
+  <span className={`font-serif italic text-lg transition-colors duration-300 ${
+    scrolled ? "text-slate-800" : "text-white"
+  }`}>
+    Lovina Ocean Dolphin Tour
+  </span>
+</Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">

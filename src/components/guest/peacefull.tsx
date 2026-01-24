@@ -20,13 +20,13 @@ export default function PeacefulSection() {
   ];
 
   return (
-    <section className="py-16 bg-blue-50">
+    <section className="py-16 bg-blue-300">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+          <h2 className="text-3xl font-serif italic md:text-4xl font-bold text-slate-800 mb-4">
             A More Authentic Experience
           </h2>
-          <p className="text-lg text-slate-600 italic">
+          <p className="text-lg font-medium text-slate-600 italic">
             "We prioritize your comfort and the dolphins' peace. We don't just chase dolphins; we find the perfect moment for you."
           </p>
         </div>

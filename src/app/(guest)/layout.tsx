@@ -11,6 +11,7 @@ import {
 import NextTopLoader from 'nextjs-toploader';
 import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next';
+import PaymentInfo from "@/components/section/payment-info";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -84,10 +85,25 @@ export default function RootLayout({
           
           {/* Main Content */}
           <main className="flex-grow">
+             
             {children}
           </main>
 
-          <FaqSection />
+          <div className="mt-16 mb-8 max-w-7xl mx-auto px-4">
+  <div className="flex flex-col lg:flex-row items-start justify-center gap-8 lg:gap-12">
+    
+    {/* Kolom Kiri: Payment Info */}
+    <div className="w-full lg:w-5/12 sticky lg:top-24">
+      <PaymentInfo />
+    </div>
+
+    {/* Kolom Kanan: FAQ Section */}
+    <div className="w-full lg:w-7/12">
+      <FaqSection />
+    </div>
+
+  </div>
+</div>
           <Footer />
           <WhatsAppButton />
           <Analytics />

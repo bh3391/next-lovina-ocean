@@ -5,6 +5,7 @@ import Package from "@/components/section/packages";
 import PickupSection from "@/components/section/pick-up";
 import TestimonialSlider from "@/components/section/testimonial-slider";
 import Map from "@/components/section/map";
+import GalleryPreview from "@/components/guest/gallery-preview";
 
 
 export default function Home() {
@@ -45,6 +46,7 @@ export default function Home() {
       <TestimonialSlider />
       
       <Package/>
+      <GalleryPreview />
       
       <PickupSection />
       <Map />

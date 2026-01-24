@@ -50,5 +50,6 @@ model Gallery {
   title       String?
   imageUrl    String
   category    String?  // "Dolphin", "Snorkeling", "Sunrise","Tour"
+  isFeatured Boolean @default(false)
   createdAt   DateTime @default(now())
 }
