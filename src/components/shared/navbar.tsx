@@ -20,7 +20,13 @@ const navLinks = [
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
+
+  // Initialize mounted state to prevent hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Handle scroll effect
   useEffect(() => {
@@ -52,7 +58,7 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed w-full z-[100] transition-all duration-300 ${
-        scrolled 
+        mounted && scrolled
           ? "bg-white/80 backdrop-blur-md py-4 shadow-sm" 
           : "bg-transparent py-6"
       }`}
@@ -67,7 +73,7 @@ export default function Navbar() {
       alt="Lovina Ocean Logo"
       fill
       className={`object-contain transition-opacity duration-500 ${
-        scrolled ? "opacity-0" : "opacity-100"
+        mounted && scrolled ? "opacity-0" : "opacity-100"
       }`}
       priority
     />
@@ -78,14 +84,14 @@ export default function Navbar() {
       alt="Lovina Ocean Logo"
       fill
       className={`object-contain transition-opacity duration-500 absolute top-0 left-0 ${
-        scrolled ? "opacity-100" : "opacity-0"
+        mounted && scrolled ? "opacity-100" : "opacity-0"
       }`}
     />
   </div>
   
   {/* Teks Nama Brand (Opsional) */}
   <span className={`font-serif italic text-md transition-colors duration-300 ${
-    scrolled ? "text-slate-800" : "text-white"
+    mounted && scrolled ? "text-slate-800" : "text-white"
   }`}>
     Lovina Ocean Dolphin Tour
   </span>
@@ -98,7 +104,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               className={`text-sm uppercase tracking-[0.2em] hover:text-blue-500 transition-colors ${
-                scrolled ? "text-slate-600" : "text-white"
+                mounted && scrolled ? "text-slate-600" : "text-white"
               } ${pathname === link.href ? "font-bold border-b-2 border-blue-500" : ""}`}
             >
               {link.name}
@@ -134,9 +140,9 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (
-            <X className={scrolled ? "text-slate-900" : "text-white"} />
+            <X className={mounted && scrolled ? "text-slate-900" : "text-white"} />
           ) : (
-            <Menu className={scrolled ? "text-slate-900" : "text-white"} />
+            <Menu className={mounted && scrolled ? "text-slate-900" : "text-white"} />
           )}
         </button>
       </div>

@@ -106,7 +106,7 @@ export default function TestimonialSliderMinimal() {
                   <div className="flex items-center gap-4">
                     <div className="flex-shrink-0 w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center border border-blue-100">
                       <span className="text-xs font-bold text-blue-700 uppercase">
-                        {reviews[currentIndex].name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
+                        {reviews[currentIndex].name.split(' ').map((n: string) => n[0]).join('').slice(0, 2)}
                       </span>
                     </div>
 
