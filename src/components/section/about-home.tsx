@@ -19,6 +19,7 @@ export default function AboutHome() {
                 src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1767764347/photo_6078126705735743735_y-768x1024_l8nity.jpg", 800)}
                 alt="Local Lovina Fisherman"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>

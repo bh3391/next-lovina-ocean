@@ -69,9 +69,10 @@ export default function Navbar() {
   <div className="relative w-10 h-10 transition-transform duration-300 group-hover:scale-110">
     {/* Logo Putih - Muncul saat di atas (scrolled = false) */}
     <Image
-      src="/logo-putih.png"
+      src="https://res.cloudinary.com/doiaj5zz1/image/upload/logo-putih_lkuzlg.png"
       alt="Lovina Ocean Logo"
       fill
+      sizes="40px"
       className={`object-contain transition-opacity duration-500 ${
         mounted && scrolled ? "opacity-0" : "opacity-100"
       }`}
@@ -80,9 +81,10 @@ export default function Navbar() {
 
     {/* Logo Biru - Muncul saat di-scroll (scrolled = true) */}
     <Image
-      src="/logo-biru-crop.png"
+      src="https://res.cloudinary.com/doiaj5zz1/image/upload/logo-biru-crop_hrp8ps.png"
       alt="Lovina Ocean Logo"
       fill
+      sizes="40px"
       className={`object-contain transition-opacity duration-500 absolute top-0 left-0 ${
         mounted && scrolled ? "opacity-100" : "opacity-0"
       }`}
@@ -122,7 +124,7 @@ export default function Navbar() {
           </SignedOut>
           
           <SignedIn>
-            <UserButton />
+            <UserButton afterSignOutUrl="/sign-out" />
           </SignedIn>
           
           <Link 

@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-950 z-10" />
         <Image
-          src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1769865667/igyzsfomhjwdcfcbwsc9.png", 1200)}
+          src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1769865670/orayxhgry2esubvtvdwo.png", 1200)}
           alt="Dolphin watching in Lovina Bali"
           fill
           priority
@@ -43,7 +43,7 @@ export default function Hero() {
         <h1 className="text-[2.8rem] leading-[0.95] md:text-8xl lg:text-9xl text-white font-serif italic mb-5 tracking-tighter">
           Wild & <br />
           <span 
-            className="italic font-sans font-black drop-shadow uppercase bg-gradient-to-b from-white to-slate/60 bg-clip-text text-transparent"
+            className="italic font-sans font-black  uppercase bg-gradient-to-b from-white to-slate/60 bg-clip-text text-transparent"
             style={{ WebkitTextStroke: "1px white" }} // Menambahkan outline tipis
           >
             Beautiful

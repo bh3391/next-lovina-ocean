@@ -39,7 +39,7 @@ export default function BlogTableClient({ blogs }: { blogs: any[] }) {
                   <div className="flex items-center gap-4">
                     <div className="relative w-16 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-slate-100">
                       {blog.image ? (
-                        <Image src={blog.image} alt={blog.title} fill className="object-cover" />
+                        <Image src={blog.image} alt={blog.title} fill sizes="64px" className="object-cover" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-slate-400 italic text-[10px]">No Img</div>
                       )}

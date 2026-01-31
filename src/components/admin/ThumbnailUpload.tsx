@@ -40,7 +40,7 @@ export default function ThumbnailUpload({ onUploadSuccess, defaultImage = "" }: 
       
       {preview ? (
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
-          <Image src={preview} alt="Thumbnail preview" fill className="object-cover" />
+          <Image src={preview} alt="Thumbnail preview" fill sizes="200px" className="object-cover" />
           <button
             onClick={() => { setPreview(""); onUploadSuccess(""); }}
             className="absolute top-2 right-2 bg-white/90 p-1.5 rounded-full shadow-md hover:bg-red-50 text-red-600 transition-colors"

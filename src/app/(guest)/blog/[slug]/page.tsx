@@ -56,7 +56,7 @@ export default async function BlogPostDetail({ params }: { params: { slug: strin
       </h1>
 
       <div className="relative aspect-video rounded-3xl overflow-hidden mb-12 shadow-2xl">
-        <Image src={post.image!} alt={post.title} fill className="object-cover" priority />
+        <Image src={post.image!} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px" className="object-cover" priority />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

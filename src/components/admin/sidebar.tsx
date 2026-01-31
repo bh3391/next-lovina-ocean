@@ -37,7 +37,7 @@ export default function AdminSidebar() {
 
       <div className="p-6 border-t border-slate-100 flex items-center justify-between">
         <div className="flex items-center space-x-3">
-          <UserButton afterSignOutUrl="/" />
+          <UserButton afterSignOutUrl="/sign-out" />
           <span className="text-xs font-semibold text-slate-700">Account</span>
         </div>
       </div>
