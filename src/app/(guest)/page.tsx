@@ -6,7 +6,6 @@ import PickupSection from "@/components/section/pick-up";
 import TestimonialSlider from "@/components/section/testimonial-slider";
 import Map from "@/components/section/map";
 import GalleryPreview from "@/components/guest/gallery-preview";
-import { useState, useEffect } from "react";
 
 
 export default function Home() {

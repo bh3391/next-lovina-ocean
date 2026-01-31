@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-slate-950 z-10" />
         <Image
-          src={getSmartImage("https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1200", 1200)}
+          src={getSmartImage("https://res.cloudinary.com/doiaj5zz1/image/upload/v1769865667/igyzsfomhjwdcfcbwsc9.png", 1200)}
           alt="Dolphin watching in Lovina Bali"
           fill
           priority
@@ -34,7 +34,7 @@ export default function Hero() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
           </span>
-          <span className="text-[9px] md:text-[10px] text-blue-200 uppercase tracking-[0.3em] font-medium">
+          <span className="text-[9px] md:text-[10px] font-bold text-white/90 uppercase tracking-[0.3em] font-medium">
             {"Bali's Best Kept Secret"}
           </span>
         </div>
@@ -42,13 +42,16 @@ export default function Hero() {
         {/* Heading - Dynamic Sizing */}
         <h1 className="text-[2.8rem] leading-[0.95] md:text-8xl lg:text-9xl text-white font-serif italic mb-5 tracking-tighter">
           Wild & <br />
-          <span className="not-italic font-sans font-black uppercase bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent">
+          <span 
+            className="italic font-sans font-black drop-shadow uppercase bg-gradient-to-b from-white to-slate/60 bg-clip-text text-transparent"
+            style={{ WebkitTextStroke: "1px white" }} // Menambahkan outline tipis
+          >
             Beautiful
           </span>
         </h1>
 
         {/* Description - Optimized readability on small screens */}
-        <p className="text-white/60 text-xs md:text-lg max-w-[280px] md:max-w-lg mx-auto mb-10 font-light leading-relaxed tracking-wide">
+        <p className="text-white text-xs md:text-lg max-w-[280px] md:max-w-lg mx-auto text-center mb-10 font-light leading-relaxed tracking-wide">
           Witness the sunrise magic with dolphins in the pristine waters of Lovina.
         </p>
         
